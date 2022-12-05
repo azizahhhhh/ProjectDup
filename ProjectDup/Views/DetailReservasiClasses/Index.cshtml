@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ProjectDup.Models.DetailReservasiClass>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Detail Reservasi</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tanggal_check_in)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tanggal_check_out)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_reservasi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_kamar)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tanggal_check_in)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tanggal_check_out)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_reservasi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_kamar)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_detail_reservasi }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_detail_reservasi }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_detail_reservasi })
+        </td>
+    </tr>
+}
+
+</table>

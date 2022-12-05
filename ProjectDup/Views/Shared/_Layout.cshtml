@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #2F4F4F;>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options" >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse" >
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Reservasi", "Index", "ReservasiClasses")</li>
+                    <li>@Html.ActionLink("Tipe Kamar", "Index", "KamarClasses")</li>
+                    <li>@Html.ActionLink("Data Pelanggan", "Index", "Pribadi")</li>
+                    <li>@Html.ActionLink("Data Admin", "Index", "AdminClasses")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="bg-light text-center text-lg-start">
+            <div>
+                <div style="border: 10px; text-align:center; margin:auto ; width:100%">
+                    <div class="text-center p-3" style="background-color: #2F4F4F; width: 100%">
+                        <div style="color:white">
+                            <div> Nama Kelompok :                             </div>
+                            <div> Cesar Mutiara Ridhani (212410101019)           </div>
+                            <div> Nur Azizah Wahyunia Putri (21241011024) </div>
+                            <div> Rizky Amalia Fitriani (212410101029)         </div>
+                            <div>
+                                &copy; @DateTime.Now.Year PROJECT PBO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

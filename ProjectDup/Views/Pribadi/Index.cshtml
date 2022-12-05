@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ProjectDup.Models.PribadiClass>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Data Pelanggan</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_ktp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_hp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_ktp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_hp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_pelanggan }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_pelanggan }) 
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.id_pelanggan })*@
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ProjectDup.Models.AdminClass>
+
+@{
+    ViewBag.Title = "Data Admin";
+}
+
+<h2>Data Admin</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_hp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_hp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_admin }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_admin }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_admin })
+        </td>
+    </tr>
+}
+
+</table>

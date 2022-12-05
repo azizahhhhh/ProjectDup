@@ -1,0 +1,50 @@
+﻿@model ProjectDup.Models.DetailReservasiClass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detail Reservasi</h2>
+
+<div>
+    <h4>DetailReservasiClass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tanggal_check_in)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tanggal_check_in)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tanggal_check_out)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tanggal_check_out)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_reservasi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_reservasi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_kamar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_kamar)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_detail_reservasi }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

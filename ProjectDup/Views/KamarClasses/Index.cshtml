@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProjectDup.Models.KamarClass>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Data Tipe Kamar</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nama_kamar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.harga)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nama_kamar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.harga)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_kamar }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_kamar }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_kamar })
+        </td>
+    </tr>
+}
+
+</table>
