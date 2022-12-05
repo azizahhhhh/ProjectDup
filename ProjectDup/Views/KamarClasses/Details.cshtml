@@ -1,0 +1,34 @@
+﻿@model ProjectDup.Models.KamarClass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KamarClass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nama_kamar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nama_kamar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.harga)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.harga)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_kamar }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

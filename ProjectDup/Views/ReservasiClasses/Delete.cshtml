@@ -1,0 +1,56 @@
+﻿@model ProjectDup.Models.ReservasiClass
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ReservasiClass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.jumlah_pemesanan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jumlah_pemesanan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_pelanggan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_pelanggan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_admin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tanggal_reservasi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tanggal_reservasi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
