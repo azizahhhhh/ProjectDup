@@ -247,6 +247,11 @@
     <Content Include="Views\KamarClasses\Details.cshtml" />
     <Content Include="Views\KamarClasses\Edit.cshtml" />
     <Content Include="Views\KamarClasses\Index.cshtml" />
+    <Content Include="Views\ReservasiClasses\Create.cshtml" />
+    <Content Include="Views\ReservasiClasses\Delete.cshtml" />
+    <Content Include="Views\ReservasiClasses\Details.cshtml" />
+    <Content Include="Views\ReservasiClasses\Edit.cshtml" />
+    <Content Include="Views\ReservasiClasses\Index.cshtml" />
     <Content Include="Views\DetailReservasiClasses\Create.cshtml" />
     <Content Include="Views\DetailReservasiClasses\Delete.cshtml" />
     <Content Include="Views\DetailReservasiClasses\Details.cshtml" />

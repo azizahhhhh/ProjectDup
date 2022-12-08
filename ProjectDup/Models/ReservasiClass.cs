@@ -11,7 +11,7 @@ namespace ProjectDup.Models
     public class ReservasiClass
     {
         [Key]
-        public string? id_reservasi { get; set; }
+        public int id_reservasi { get; set; }
         public string jumlah_pemesanan { get; set; }
         //[ForeignKey("data_pribadi_pelanggan")]
         public string id_pelanggan { get; set; }

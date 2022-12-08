@@ -134,12 +134,10 @@ namespace ProjectDup.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult login([Bind(Include = "username,password")] AdminClass adminclass)
         {
-            // var admin = db.AdminObj.Where(a => a.username.Equals(adminclass.username) && a.password.Equals(adminclass.password));
-            if (adminclass != null)
+            var admin = db.AdminObj.Where(a => a.username.Equals(adminclass.username) && a.password.Equals(adminclass.password));
+            if (admin != null)
             {
                 Session["login"] = true;
-                // return RedirectToAction(nameof(Index));
-                return RedirectToAction("Index", "Home");
             }
             return RedirectToAction(nameof(Login));
 

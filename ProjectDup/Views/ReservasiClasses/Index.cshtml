@@ -40,11 +40,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.tanggal_reservasi)
         </td>
+      
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id_reservasi }) |
             @Html.ActionLink("Details", "Details", new { id=item.id_reservasi }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.id_reservasi })
         </td>
+
     </tr>
 }
 
