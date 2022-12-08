@@ -54,29 +54,6 @@
             @Html.ValidationMessageFor(model => model.tanggal_reservasi, "", new { @class = "text-danger" })
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.tanggal_check_in, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.tanggal_check_in, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
-            @Html.ValidationMessageFor(model => model.tanggal_check_in, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.tanggal_check_out, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.tanggal_check_out, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
-            @Html.ValidationMessageFor(model => model.tanggal_check_out, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.id_kamar, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.id_kamar, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.id_kamar, "", new { @class = "text-danger" })
-        </div>
-    </div>
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">

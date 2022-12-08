@@ -22,6 +22,7 @@ namespace ProjectDup.Controllers
         }
 
         // GET: ReservasiClasses/Details/5
+        public ActionResult Details(string? id)
         {
             if (id == null)
             {
@@ -46,16 +47,19 @@ namespace ProjectDup.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "id_reservasi,Jumlah_pemesanan,id_pelanggan,id_admin,tanggal_reservasi")] ReservasiClass reservasiClass)
         {
             if (ModelState.IsValid)
             {
                 db.ReservasiClasses.Add(reservasiClass);
+                return RedirectToAction("Create", "DetailReservasiClasses");
             }
 
             return View(reservasiClass);
         }
 
         // GET: ReservasiClasses/Edit/5
+        public ActionResult Edit(string? id)
         {
             if (id == null)
             {
@@ -74,6 +78,7 @@ namespace ProjectDup.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "id_reservasi,Jumlah_pemesanan,id_pelanggan,id_admin,tanggal_reservasi")] ReservasiClass reservasiClass)
         {
             if (ModelState.IsValid)
             {
@@ -85,6 +90,7 @@ namespace ProjectDup.Controllers
         }
 
         // GET: ReservasiClasses/Delete/5
+        public ActionResult Delete(string? id)
         {
             if (id == null)
             {
@@ -101,6 +107,7 @@ namespace ProjectDup.Controllers
         // POST: ReservasiClasses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
             ReservasiClass reservasiClass = db.ReservasiClasses.Find(id);
             db.ReservasiClasses.Remove(reservasiClass);

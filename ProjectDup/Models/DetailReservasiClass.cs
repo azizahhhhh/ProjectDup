@@ -14,7 +14,7 @@ namespace ProjectDup.Models
         public int id_detail_reservasi { get; set; }
         public string tanggal_check_in { get; set; }
         public string tanggal_check_out { get; set; }
-        public int id_reservasi { get; set; }
+        public string id_reservasi { get; set; }
         public int id_kamar { get; set; }
     }
 }
